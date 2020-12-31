@@ -1,43 +1,181 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width"/>
-<title>타이틀을 넣어주세요.</title>
-<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
-</head>
-<body>
-<a id="kakao-link-btn" href="javascript:;">
-<img src="//developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"/>
-</a>
-<script type='text/javascript'>
-  //<![CDATA[
-    Kakao.init('fe8e700a402c67918bc34f6ef974d636');
+<html lang="en">
 
-    Kakao.Link.createDefaultButton({
-      container: '#kakao-link-btn',
-      objectType: 'feed',
-      content: {
-        title: '대제목',
-        description: '소제목',
-        imageUrl: 'https://cdn2.vectorstock.com/i/1000x1000/84/61/simple-happy-new-year-card-minimalistic-design-vector-18068461.jpg',
-        link: {
-          mobileWebUrl: 'https://haea3671.github.io/',
-          webUrl: 'https://haea3671.github.io/'
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>새해맞이 깜짝 편지</title>
+
+    <link rel="shortcut icon" href="https://www.pinclipart.com/picdir/big/110-1101731_heart-black-heart-png-font-clipart.png">
+
+    <meta property="og:image"
+        content="https://cdn2.vectorstock.com/i/1000x1000/84/61/simple-happy-new-year-card-minimalistic-design-vector-18068461.jpg">
+    <meta property="og:title" content="from 안선생">
+    <meta property="og:description" content="새해를 시작하며">
+
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poor+Story&display=swap" rel="stylesheet">
+
+
+    <style>
+        * {
+            font-family: 'Poor Story', cursive;
         }
-      },
-      buttons: [
-        {
-          title: '버튼 타이틀',
-          link: {
-            mobileWebUrl: 'https://haea3671.github.io/',
-            webUrl: 'https://haea3671.github.io/'
-          }
+
+        body {
+            background-color: rgb(255, 196, 247);
         }
-      ]
-    });
-  //]]>
-</script>
+
+        .envelope {
+
+            width: 300px;
+            height: 300px;
+
+
+            background-image: url('https://file3.instiz.net/data/cached_img/upload/2019/07/03/19/f69a9c448aed65cb657a38585c6e1484.png');
+
+            background-size: cover;
+            background-position: center;
+
+            margin: 0px auto 0px auto;
+
+            cursor: pointer;
+        }
+
+        .envelope-msg {
+            text-align: center;
+            color: white;
+            text-shadow: 5px 5px 10px black;
+            font-size: 30px;
+        }
+
+        .envelope-subtitle {
+                color: gray;
+                text-align: center;
+                margin: 150px 0px 0px 0px;
+                font-size: 20px;
+            }
+
+        .letter-close {
+            display: block;
+        }
+
+        .letter-open {
+            display: none;
+        }
+
+        .rtan {
+            background-color: white;
+
+            width: 200px;
+            height: 200px;
+
+            background-image: url('https://happynewyear.wiki/wp-content/uploads/2020/10/happy-new-year-2021-gifs.gif');
+            background-size: cover;
+            background-position: center;
+
+            margin: 100px auto 0px auto;
+            border-radius: 45px;
+            border: 5px solid white;
+            box-shadow: 0px 0px 10px 0px white;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            text-shadow: 5px 5px 10px black;
+        }
+
+        .messagebox {
+            background-color: ivory;
+            box-shadow: 0px 0px 10px 0px white;
+            width: 400px;
+            margin: auto;
+
+            color: black;
+            font-size: 20px;
+            line-height: 30px;
+
+            padding: 30px;
+        }
+
+        .from {
+            text-align: right;
+            margin-bottom: 0px;
+        }
+
+        .madeby {
+            text-align: center;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            color: white;
+        }
+
+        @media screen and (max-width: 760px) {
+
+            
+            .messagebox {
+                width: 300px;
+                padding: 20px;
+            }
+
+            .rtan {
+                width: 150px;
+                height: 150px;
+                margin: 70px auto 0px auto;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            .envelope {
+                width: 200px;
+                height: 200px;
+                margin: 0px auto 0px auto;
+            }
+        }
+    </style>
+
+    <script>
+        function open_letter() {
+            document.getElementsByClassName("letter-close")[0].style.display = "none";
+            document.getElementsByClassName("letter-open")[0].style.display = "block";
+        }
+        function hiddenmsg() {
+            alert('hidden message');
+            window.location.href = "https://blog.naver.com/devilnight36";
+        }
+    </script>
+</head>
+
+
+<body>
+
+    <script src="https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/xmas/snow.js"></script>
+    <div class="letter-close">
+        <h5 class="envelope-subtitle">touch me!</h5>
+        <div class="envelope" onclick="open_letter()"></div>
+        <h2 class="envelope-msg">Let's welcome the new year!</h2>
+    </div>
+
+    <div class="letter-open">
+        <div class="rtan" onclick="hiddenmsg()"> </div>
+        <h1>새해가 밝았습니다!</h1>
+        <div class="messagebox">
+            2020년은 없던 겁니다. <br />
+            저는 2019년이 마치 2년처럼 느껴졌답니다^^ <br />
+            지구에 가라앉은 먹구름이 걷히길 기도하며, <br />
+            건강하고 무탈한 새해 되시길 바랍니다. <br />
+            언제나 즐겁고 행복한 하루하루 보내시길. <br />
+            <p class="from"> 새해를 맞아, 안선생 올림</p>
+        </div>
+        <h5 class="madeby"> made by 안선생 </h5>
+    </div>
+
 </body>
+
 </html>
